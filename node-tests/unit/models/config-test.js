@@ -32,6 +32,17 @@ describe('Config', function() {
     });
   });
 
+  describe('outputPath', function(){
+    it('defaults to dist', function() {
+      var config = createConfig('tomster', {});
+      expect(config.get('outputPath')).to.eq('dist');
+    });
+    it('allows configuration', function() {
+      var config = createConfig('tomster', { outputPath: 'dist-deploy' });
+      expect(config.get('outputPath')).to.eq('dist-deploy');
+    });
+  });
+
   describe('store.type', function(){
     it('defaults to redis', function() {
       var config = createConfig('tomster', {});
