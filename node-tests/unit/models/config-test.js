@@ -33,13 +33,13 @@ describe('Config', function() {
   });
 
   describe('outputPath', function(){
-    it('defaults to dist', function() {
+    it('defaults to tmp/deploy', function() {
       var config = createConfig('tomster', {});
-      expect(config.get('outputPath')).to.eq('dist');
+      expect(config.get('outputPath')).to.eq('tmp/deploy');
     });
     it('allows configuration', function() {
-      var config = createConfig('tomster', { outputPath: 'dist-deploy' });
-      expect(config.get('outputPath')).to.eq('dist-deploy');
+      var config = createConfig('tomster', { outputPath: 'dist' });
+      expect(config.get('outputPath')).to.eq('dist');
     });
   });
 

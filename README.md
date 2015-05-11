@@ -69,6 +69,7 @@ By default, `ember-cli-deploy` expects a `deploy.js` file in the `config/` direc
 module.exports = {
   development: {
     buildEnv: 'development', // Override the environment passed to the ember asset build. Defaults to 'production'
+    outputPath: 'tmp/deploy', // Override the output path passed to the ember asset build. Defaults to 'tmp/deploy'
     store: {
       type: 'redis', // the default store is 'redis'
       host: 'localhost',
